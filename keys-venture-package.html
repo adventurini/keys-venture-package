@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keys by Apartment List — Venture Concept &amp; Roadmap</title>
+<meta name="description" content="Keys by Apartment List turns on-time rent into a path to homeownership — tri-bureau rent reporting, the Keys Score, and Lea alerts for when buying beats renting. Venture concept and phased roadmap.">
+<meta name="theme-color" content="#FA3C66">
+<meta name="author" content="Apartment List">
+
+<link rel="icon" href="https://www.apartmentlist.com/favicon.ico" sizes="32x32" type="image/x-icon">
+<link rel="shortcut icon" href="https://www.apartmentlist.com/favicon.ico">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Apartment List">
+<meta property="og:title" content="Keys by Apartment List — Venture Concept &amp; Roadmap">
+<meta property="og:description" content="Apartment List helped 41 million people rent. Keys is how we help them own — rent reporting, the Keys Score, and the moment Lea says buying just beat renting.">
+<meta property="og:image" content="https://cdn.apartmentlist.com/image/upload/t_homepage_hero_desktop_xl/homepage/HeroBannerDesktop_gradient.webp">
+<meta property="og:image:alt" content="Apartment List — Great apartments. No doom scroll.">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Keys by Apartment List — Venture Concept &amp; Roadmap">
+<meta name="twitter:description" content="Apartment List helped 41 million people rent. Keys is how we help them own — rent reporting, the Keys Score, and the moment Lea says buying just beat renting.">
+<meta name="twitter:image" content="https://cdn.apartmentlist.com/image/upload/t_homepage_hero_desktop_xl/homepage/HeroBannerDesktop_gradient.webp">
+<meta name="twitter:image:alt" content="Apartment List — Great apartments. No doom scroll.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --pink:#FA3C66;
+    --pink-deep:#E62E58;
+    --coral:#FF7A59;
+    --grape:#8B5CF6;
+    --ink:#1D2A43;
+    --ink-soft:#4A5670;
+    --bg:#FFFFFF;
+    --blush:#FFF1F4;
+    --sand:#FDF7F2;
+    --green:#0E9F6E;
+    --line:#ECE7EE;
+    --radius:20px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',-apple-system,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4{font-family:'Poppins',sans-serif;line-height:1.15;letter-spacing:-0.01em}
+  a{text-decoration:none;color:inherit}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 32px}
+  section{padding:92px 0;scroll-margin-top:70px}
+
+  /* nav */
+  nav{position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);z-index:50}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{display:flex;align-items:center;gap:9px;font-family:'Poppins',sans-serif;font-weight:700;font-size:18px;color:var(--ink);white-space:nowrap;flex:none}
+  .logo .keys-tag{font-weight:600;color:var(--pink);background:var(--blush);border-radius:999px;padding:2px 10px;font-size:12.5px}
+  .nav-links{display:flex;gap:26px;font-size:14px;font-weight:500;color:var(--ink-soft)}
+  .nav-links a:hover{color:var(--pink)}
+  .btn{display:inline-block;font-family:'Poppins',sans-serif;font-weight:600;font-size:15px;border-radius:999px;padding:13px 26px;transition:transform .15s ease, box-shadow .15s ease;cursor:pointer;border:none;white-space:nowrap;text-align:center}
+  .btn-primary{background:var(--pink);color:#fff;box-shadow:0 6px 18px rgba(250,60,102,.32)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(250,60,102,.4)}
+  .btn-ghost{background:#fff;color:var(--ink);border:1.5px solid var(--line)}
+  .btn-ghost:hover{border-color:var(--pink);color:var(--pink)}
+  .btn-sm{padding:10px 18px;font-size:14px}
+
+  /* ============ COVER ============ */
+  .cover{min-height:100svh;display:flex;flex-direction:column;background:
+    radial-gradient(900px 600px at 85% 0%, rgba(139,92,246,.35), transparent 60%),
+    radial-gradient(800px 600px at 0% 100%, rgba(255,122,89,.28), transparent 55%),
+    radial-gradient(600px 400px at 50% 50%, rgba(250,60,102,.18), transparent 60%),
+    var(--ink);
+    color:#fff;position:relative;overflow:hidden}
+  .cover-top{display:flex;justify-content:space-between;align-items:center;padding-top:28px;padding-bottom:28px;font-size:13px;color:#B9C2D6}
+  .cover-logo{display:flex;align-items:center;gap:9px;font-family:'Poppins',sans-serif;font-weight:700;font-size:17px;color:#fff}
+  .cover-main{flex:1;display:flex;flex-direction:column;justify-content:center;padding-top:48px;padding-bottom:32px}
+  .cover-kicker{display:inline-flex;align-items:center;gap:9px;font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#FFB1C4;margin-bottom:28px}
+  .cover-kicker::before{content:'';width:28px;height:2px;background:var(--pink);border-radius:2px}
+  .cover h1{font-size:clamp(64px,11vw,148px);font-weight:800;line-height:.95;letter-spacing:-0.03em;display:flex;align-items:center;gap:.18em;flex-wrap:wrap}
+  .cover h1 .mark{width:.78em;height:.78em;flex:none}
+  .cover .tagline{font-family:'Poppins',sans-serif;font-size:clamp(19px,2.6vw,30px);font-weight:600;color:#fff;margin-top:26px;max-width:680px;line-height:1.35}
+  .cover .tagline .hl{color:#FFB1C4}
+  .cover-meta{margin-top:34px;font-size:14px;color:#B9C2D6;display:flex;flex-direction:column;gap:4px}
+  .cover-meta b{color:#fff;font-weight:600}
+  .cover-toc{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid rgba(255,255,255,.16);margin-top:56px}
+  .toc-item{padding:24px 24px 28px 0;border-right:1px solid rgba(255,255,255,.16);transition:background .2s}
+  .toc-item:last-child{border-right:none;padding-left:28px}
+  .toc-item:hover{background:rgba(255,255,255,.04)}
+  .toc-item .n{font-family:'Poppins',sans-serif;font-weight:800;font-size:14px;color:var(--pink);letter-spacing:.06em}
+  .toc-item h3{font-size:20px;margin:8px 0 6px;color:#fff}
+  .toc-item p{font-size:13.5px;color:#B9C2D6}
+  .scroll-cue{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#8E99B3;display:flex;flex-direction:column;align-items:center;gap:8px}
+  .scroll-cue::after{content:'';width:1.5px;height:26px;background:linear-gradient(180deg,var(--pink),transparent);animation:drip 1.8s infinite}
+  @keyframes drip{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+  /* part dividers */
+  .part{background:var(--sand);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:40px 0;scroll-margin-top:70px}
+  .part-inner{display:flex;align-items:baseline;gap:20px}
+  .part .pn{font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(36px,5vw,56px);color:var(--pink);line-height:1}
+  .part h2{font-size:clamp(20px,2.6vw,28px)}
+  .part p{font-size:14px;color:var(--ink-soft);margin-top:2px}
+
+  /* ============ PART 01 — PRODUCT ============ */
+  .hero{position:relative;overflow:hidden;background:
+    radial-gradient(900px 500px at 85% -10%, rgba(139,92,246,.22), transparent 60%),
+    radial-gradient(800px 480px at -10% 20%, rgba(255,122,89,.25), transparent 55%),
+    linear-gradient(160deg,#FFF6F0 0%, #FFEFF3 45%, #F6F0FF 100%)}
+  .hero-inner{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding-top:84px;padding-bottom:96px}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--pink);background:#fff;border:1px solid #FFD4DE;border-radius:999px;padding:7px 14px;margin-bottom:22px}
+  .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--pink);animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+  .hero h1{font-size:clamp(34px,4.6vw,58px);font-weight:700;max-width:560px}
+  .hero h1 .accent{color:var(--pink);position:relative;white-space:nowrap}
+  .hero h1 .accent svg{position:absolute;left:0;bottom:-8px;width:100%}
+  .hero p.lede{font-size:18.5px;color:var(--ink-soft);margin:22px 0 32px;max-width:520px}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .hero-note{font-size:13.5px;color:var(--ink-soft);margin-top:16px}
+  .hero-note b{color:var(--green)}
+
+  .score-card{background:#fff;border-radius:26px;box-shadow:0 24px 60px rgba(29,42,67,.14);padding:30px 30px 26px;max-width:430px;justify-self:end;width:100%;position:relative}
+  .score-card .chip{position:absolute;top:-14px;right:22px;background:var(--ink);color:#fff;font-size:12px;font-weight:600;border-radius:999px;padding:6px 14px;font-family:'Poppins',sans-serif}
+  .score-head{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+  .avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--coral),var(--pink));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-family:'Poppins',sans-serif}
+  .score-head small{display:block;color:var(--ink-soft);font-size:12.5px}
+  .score-head strong{font-family:'Poppins',sans-serif;font-size:15.5px}
+  .meter-row{display:flex;align-items:center;gap:22px}
+  .ring{position:relative;width:128px;height:128px;flex:none}
+  .ring svg{transform:rotate(-90deg)}
+  .ring .track{stroke:#F3EDF1}
+  .ring .fill{stroke:url(#grad);stroke-linecap:round;stroke-dasharray:339.3;stroke-dashoffset:339.3;animation:ring 1.6s .4s cubic-bezier(.22,1,.36,1) forwards}
+  @keyframes ring{to{stroke-dashoffset:91.6}}
+  .ring .pct{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+  .ring .pct b{font-family:'Poppins',sans-serif;font-size:30px;color:var(--ink)}
+  .ring .pct span{font-size:11px;color:var(--ink-soft);font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+  .score-stats{display:flex;flex-direction:column;gap:12px;font-size:13.5px}
+  .score-stats .row b{font-family:'Poppins',sans-serif;font-size:16px;display:block;color:var(--ink)}
+  .score-stats .row span{color:var(--ink-soft)}
+  .score-foot{margin-top:20px;background:var(--blush);border-radius:14px;padding:14px 16px;font-size:13.5px;color:var(--ink)}
+  .score-foot b{color:var(--pink)}
+  .ontime{display:inline-flex;align-items:center;gap:6px;color:var(--green);font-weight:600}
+  .ontime::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--green)}
+
+  .strip{background:#fff;border-bottom:1px solid var(--line)}
+  .strip-inner{display:flex;justify-content:space-between;gap:24px;padding-top:26px;padding-bottom:26px;flex-wrap:wrap}
+  .strip .stat b{font-family:'Poppins',sans-serif;font-size:24px;color:var(--ink);display:block}
+  .strip .stat span{font-size:13.5px;color:var(--ink-soft)}
+
+  .kicker{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--pink);margin-bottom:14px}
+  .h2{font-size:clamp(28px,3.4vw,42px);font-weight:700;max-width:680px}
+  .sub{font-size:17.5px;color:var(--ink-soft);max-width:620px;margin-top:16px}
+
+  .truth-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px}
+  .truth-card{border-radius:var(--radius);padding:34px;border:1.5px solid var(--line)}
+  .truth-card.bad{background:var(--sand)}
+  .truth-card.good{background:linear-gradient(150deg,#FFF1F4,#F4EEFF);border-color:#F4D8E1}
+  .truth-card h3{font-size:21px;margin-bottom:12px}
+  .truth-card p{color:var(--ink-soft);font-size:15.5px}
+  .big-number{font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(40px,5vw,64px);color:var(--pink);line-height:1}
+  .truth-card .lbl{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin:8px 0 16px}
+
+  .steps{background:var(--blush)}
+  .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px}
+  .step{background:#fff;border-radius:var(--radius);padding:34px 30px;box-shadow:0 8px 28px rgba(29,42,67,.06);position:relative;transition:transform .2s ease}
+  .step:hover{transform:translateY(-4px)}
+  .step .num{font-family:'Poppins',sans-serif;font-weight:800;font-size:15px;color:#fff;background:var(--pink);width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+  .step h3{font-size:20px;margin-bottom:10px}
+  .step p{font-size:15px;color:var(--ink-soft)}
+  .step .tag{display:inline-block;margin-top:16px;font-size:12.5px;font-weight:600;color:var(--green);background:#E8F7F0;border-radius:999px;padding:5px 12px}
+
+  .lea-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
+  .chat{background:var(--sand);border-radius:24px;padding:28px;border:1.5px solid var(--line)}
+  .bubble{max-width:88%;border-radius:18px;padding:14px 18px;font-size:14.5px;margin-bottom:14px;line-height:1.55}
+  .bubble.lea-b{background:#fff;border:1.5px solid var(--line);border-top-left-radius:6px}
+  .bubble.user-b{background:var(--pink);color:#fff;margin-left:auto;border-top-right-radius:6px}
+  .bubble b{font-weight:600}
+  .who{font-size:12px;font-weight:600;color:var(--ink-soft);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+  .who .lea-dot{width:18px;height:18px;border-radius:50%;background:linear-gradient(135deg,var(--grape),var(--pink));display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:10px;font-weight:700}
+  .feature-list{display:flex;flex-direction:column;gap:22px;margin-top:36px}
+  .feature{display:flex;gap:16px}
+  .feature .ic{flex:none;width:44px;height:44px;border-radius:14px;background:var(--blush);display:flex;align-items:center;justify-content:center;font-size:20px}
+  .feature h4{font-family:'Poppins',sans-serif;font-size:16.5px;margin-bottom:4px}
+  .feature p{font-size:14.5px;color:var(--ink-soft)}
+
+  .partners{background:var(--ink);color:#fff}
+  .partners .h2{color:#fff}
+  .partners .sub{color:#B9C2D6}
+  .partners-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:44px}
+  .p-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:30px}
+  .p-card h3{font-size:19px;margin-bottom:10px;color:#FFD0DC}
+  .p-card p{font-size:15px;color:#C9D1E2}
+
+  .quote{background:var(--sand);text-align:center}
+  .quote blockquote{font-family:'Poppins',sans-serif;font-size:clamp(22px,2.8vw,32px);font-weight:600;max-width:780px;margin:0 auto;line-height:1.4}
+  .quote blockquote .hl{color:var(--pink)}
+  .quote cite{display:block;margin-top:22px;font-style:normal;font-size:14.5px;color:var(--ink-soft)}
+
+  /* ============ PART 02 — ROADMAP ============ */
+  .rm-hero{background:
+    radial-gradient(700px 400px at 90% -10%, rgba(139,92,246,.18), transparent 60%),
+    radial-gradient(700px 420px at -5% 30%, rgba(255,122,89,.2), transparent 55%),
+    linear-gradient(160deg,#FFF6F0 0%, #FFEFF3 55%, #F6F0FF 100%);
+    padding:72px 0 64px;scroll-margin-top:70px}
+  .rm-hero h2{font-size:clamp(30px,4vw,48px);font-weight:700;max-width:700px}
+  .rm-hero h2 .accent{color:var(--pink)}
+  .rm-hero p.rm-lede{font-size:17px;color:var(--ink-soft);max-width:640px;margin-top:18px}
+  .thesis{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+  .thesis-card{background:#fff;border-radius:16px;padding:20px 22px;box-shadow:0 8px 24px rgba(29,42,67,.07)}
+  .thesis-card b{font-family:'Poppins',sans-serif;font-size:14.5px;display:block;margin-bottom:4px}
+  .thesis-card span{font-size:13.5px;color:var(--ink-soft)}
+
+  .timeline{position:relative;margin-top:56px}
+  .timeline::before{content:'';position:absolute;left:27px;top:8px;bottom:8px;width:3px;border-radius:3px;background:linear-gradient(180deg,var(--coral),var(--pink) 40%,var(--grape))}
+  .phase{position:relative;padding:0 0 56px 84px}
+  .phase:last-child{padding-bottom:0}
+  .phase .marker{position:absolute;left:6px;top:0;width:46px;height:46px;border-radius:50%;background:#fff;border:3px solid var(--pink);display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:800;font-size:15px;color:var(--pink);box-shadow:0 6px 16px rgba(250,60,102,.18)}
+  .phase.future .marker{border-color:var(--grape);color:var(--grape);box-shadow:0 6px 16px rgba(139,92,246,.18)}
+  .phase-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+  .phase-head h3{font-size:22px}
+  .when{font-size:12.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#fff;background:var(--ink);border-radius:999px;padding:5px 13px}
+  .phase.future .when{background:var(--grape)}
+  .phase .goal{font-size:15.5px;color:var(--ink-soft);max-width:640px;margin-bottom:20px}
+  .phase .goal b{color:var(--ink)}
+  .phase-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:16px}
+  .build,.gate{border-radius:16px;padding:22px 24px}
+  .build{background:var(--sand);border:1.5px solid var(--line)}
+  .gate{background:var(--blush);border:1.5px solid #F4D0DB}
+  .build h4,.gate h4{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px}
+  .build h4{color:var(--ink-soft)}
+  .gate h4{color:var(--pink)}
+  .build ul,.gate ul{list-style:none;display:flex;flex-direction:column;gap:9px;font-size:14.5px}
+  .build li{padding-left:22px;position:relative;color:var(--ink)}
+  .build li::before{content:'';position:absolute;left:0;top:8px;width:8px;height:8px;border-radius:3px;background:var(--coral)}
+  .gate li{padding-left:24px;position:relative;color:var(--ink)}
+  .gate li::before{content:'✓';position:absolute;left:0;color:var(--pink);font-weight:700}
+  .build li b,.gate li b{font-weight:600}
+  .rev{display:inline-flex;align-items:center;gap:7px;margin-top:16px;font-size:13px;font-weight:600;border-radius:999px;padding:6px 14px}
+  .rev.none{background:#EEF1F6;color:var(--ink-soft)}
+  .rev.first{background:#E8F7F0;color:var(--green)}
+  .rev.scale{background:#F1EBFF;color:var(--grape)}
+
+  .model{background:var(--blush)}
+  .model-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+  .m-card{background:#fff;border-radius:var(--radius);padding:28px;box-shadow:0 8px 24px rgba(29,42,67,.06)}
+  .m-card .amt{font-family:'Poppins',sans-serif;font-weight:800;font-size:30px;color:var(--pink)}
+  .m-card .per{font-size:12.5px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin:4px 0 12px}
+  .m-card p{font-size:14px;color:var(--ink-soft)}
+  .model-note{margin-top:26px;font-size:14px;color:var(--ink-soft);max-width:720px}
+  .model-note b{color:var(--ink)}
+
+  .guard-grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:44px;max-width:760px}
+  .g-card{border-radius:var(--radius);padding:28px;border:1.5px solid var(--line)}
+  .g-card.no{background:var(--sand)}
+  .g-card h3{font-size:18px;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+  .g-card.no h3::before{content:'🚫'}
+  .g-card ul{list-style:none;display:flex;flex-direction:column;gap:11px;font-size:14.5px;color:var(--ink-soft)}
+  .g-card li b{color:var(--ink);font-weight:600}
+
+  .whynow{background:var(--ink);color:#fff}
+  .whynow .h2{color:#fff}
+  .whynow .sub{color:#B9C2D6}
+  .now-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+  .n-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:26px}
+  .n-card .num{font-family:'Poppins',sans-serif;font-weight:800;font-size:26px;color:#FFD0DC;margin-bottom:8px}
+  .n-card p{font-size:14px;color:#C9D1E2}
+  .n-card b{color:#fff}
+
+  .final{background:linear-gradient(140deg,var(--pink) 0%, var(--pink-deep) 60%, #C2255C 100%);color:#fff;text-align:center;border-radius:28px;padding:64px 36px;margin:0 32px}
+  .final h2{font-size:clamp(26px,3.6vw,42px);font-weight:700}
+  .final p{font-size:16.5px;opacity:.92;max-width:580px;margin:16px auto 0}
+  .final .btn{background:#fff;color:var(--pink);margin-top:30px}
+
+  footer{padding:50px 0 40px;color:var(--ink-soft);font-size:13.5px}
+  .foot-inner{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+  .foot-links{display:flex;gap:22px}
+  .disclaimer{margin-top:28px;font-size:12px;color:#9AA3B5;max-width:820px;line-height:1.6}
+
+  @media (max-width:900px){
+    section{padding:64px 0}
+    .nav-links{display:none}
+    .hero-inner,.lea-grid{grid-template-columns:1fr;gap:48px;max-width:660px;margin:0 auto}
+    .hero-inner{padding-top:56px;padding-bottom:64px}
+    .hero h1{max-width:none}
+    .hero p.lede{max-width:none}
+    .score-card{justify-self:center;margin:0 auto;max-width:520px;width:100%}
+    .truth-grid,.steps-grid,.partners-grid,.thesis,.model-grid,.now-grid{grid-template-columns:1fr}
+    .phase-grid{grid-template-columns:1fr}
+    .timeline::before{left:21px}
+    .phase{padding-left:64px}
+    .phase .marker{width:38px;height:38px;left:3px;font-size:13px}
+    .strip-inner{display:grid;grid-template-columns:1fr 1fr;gap:20px 28px}
+    .cover-toc{grid-template-columns:1fr}
+    .toc-item{border-right:none;border-bottom:1px solid rgba(255,255,255,.16);padding:20px 0}
+    .toc-item:last-child{border-bottom:none;padding-left:0}
+  }
+  @media (max-width:560px){
+    .wrap{padding:0 20px}
+    .nav-inner{height:58px}
+    .logo{font-size:16px;gap:7px}
+    .logo svg{width:24px;height:24px}
+    .logo .keys-tag{font-size:11.5px;padding:2px 9px}
+    .btn-sm{padding:9px 16px;font-size:13px}
+    .ribbon{font-size:11.5px;padding:7px 14px}
+    .cover-top{font-size:11.5px}
+    .eyebrow{font-size:11.5px;padding:6px 12px;margin-bottom:18px}
+    .hero p.lede{font-size:16.5px;margin:18px 0 26px}
+    .hero-ctas{flex-direction:column;align-items:stretch}
+    .hero-ctas .btn{width:100%}
+    .hero-note{font-size:12.5px}
+    .score-card{max-width:100%;padding:26px 22px 22px}
+    .meter-row{gap:18px}
+    .ring{width:112px;height:112px}
+    .ring svg{width:112px;height:112px}
+    .ring .pct b{font-size:26px}
+    .strip-inner{display:grid;grid-template-columns:1fr 1fr;gap:18px 24px}
+    .final{margin:0 16px;padding:48px 22px;border-radius:24px}
+    .final .btn{width:100%}
+    .foot-inner{flex-direction:column;align-items:flex-start;gap:18px}
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none!important;transition:none!important}
+    .ring .fill{stroke-dashoffset:91.6}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ COVER ============ -->
+<div class="cover" id="top">
+  <div class="wrap" style="display:flex;flex-direction:column;flex:1">
+    <div class="cover-top">
+      <span class="cover-logo">
+        <svg width="26" height="26" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path d="M16 3 L29 13 V26 a3 3 0 0 1-3 3 H6 a3 3 0 0 1-3-3 V13 Z" fill="#FA3C66"/>
+          <rect x="12.5" y="17" width="7" height="12" rx="2" fill="#fff"/>
+        </svg>
+        apartment list
+      </span>
+      <span>Founding Builder, New Ventures · Concept prototype</span>
+    </div>
+    <div class="cover-main">
+      <span class="cover-kicker">A new venture proposal</span>
+      <h1>
+        <svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path d="M16 3 L29 13 V26 a3 3 0 0 1-3 3 H6 a3 3 0 0 1-3-3 V13 Z" fill="#FA3C66"/>
+          <rect x="12.5" y="17" width="7" height="12" rx="2" fill="#fff"/>
+        </svg>
+        Keys
+      </h1>
+      <p class="tagline">Apartment List helped 41 million people rent. Keys is how we help them <span class="hl">own</span> — and how their churn becomes our second revenue engine.</p>
+      <div class="cover-meta">
+        <span><b>The thesis:</b> our highest-value customer event — a renter buying a home — currently earns us nothing.</span>
+        <span><b>The plan:</b> build the readiness rails while rates are high; own the first-time-buyer wave when they break.</span>
+      </div>
+      <div class="cover-toc">
+        <a class="toc-item" href="#product">
+          <span class="n">01</span>
+          <h3>The product</h3>
+          <p>What a renter sees: rent reporting, the Keys Score, and the moment Lea says "buying just beat renting."</p>
+        </a>
+        <a class="toc-item" href="#roadmap">
+          <span class="n">02</span>
+          <h3>The roadmap</h3>
+          <p>Five gated phases from a six-week validation to a scaled referral engine — asset-light at every step.</p>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-cue">Scroll</div>
+</div>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a class="logo" href="#top">
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <path d="M16 3 L29 13 V26 a3 3 0 0 1-3 3 H6 a3 3 0 0 1-3-3 V13 Z" fill="#FA3C66"/>
+        <rect x="12.5" y="17" width="7" height="12" rx="2" fill="#fff"/>
+      </svg>
+      apartment list <span class="keys-tag">Keys</span>
+    </a>
+    <div class="nav-links">
+      <a href="#product">The product</a>
+      <a href="#how">How it works</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#whynow">Why now</a>
+    </div>
+    <a class="btn btn-primary btn-sm" href="#roadmap">See the plan</a>
+  </div>
+</nav>
+
+<!-- ============ PART 01 — THE PRODUCT ============ -->
+<div class="part" id="product">
+  <div class="wrap part-inner">
+    <span class="pn">01</span>
+    <div>
+      <h2>The product</h2>
+      <p>The marketing page a renter would actually see.</p>
+    </div>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <span class="eyebrow"><span class="dot"></span> New · Keys by Apartment List</span>
+      <h1>Your rent has been building toward <span class="accent">something.
+        <svg viewBox="0 0 200 12" preserveAspectRatio="none" aria-hidden="true"><path d="M2 9 Q 60 2 100 7 T 198 5" stroke="#FFB1C4" stroke-width="5" fill="none" stroke-linecap="round"/></svg>
+      </span></h1>
+      <p class="lede">Every on-time payment you've ever made was proof you can own a home. We just made it count. Report your rent, watch your buying power grow, and we'll tell you the moment renting stops making sense.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#how">See what your rent has built</a>
+        <a class="btn btn-ghost" href="#how">How it works</a>
+      </div>
+      <p class="hero-note">Free for Apartment List renters · <b>12 months of reported rent</b> can improve mortgage eligibility under Fannie Mae guidelines</p>
+    </div>
+
+    <div class="score-card">
+      <span class="chip">Your Keys Score</span>
+      <div class="score-head">
+        <div class="avatar">JM</div>
+        <div>
+          <strong>Jordan's path to keys</strong>
+          <small>Renting since 2023 · Orlando, FL</small>
+        </div>
+      </div>
+      <div class="meter-row">
+        <div class="ring">
+          <svg width="128" height="128" viewBox="0 0 120 120">
+            <defs>
+              <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FF7A59"/>
+                <stop offset="100%" stop-color="#FA3C66"/>
+              </linearGradient>
+            </defs>
+            <circle class="track" cx="60" cy="60" r="54" stroke-width="11" fill="none"/>
+            <circle class="fill" cx="60" cy="60" r="54" stroke-width="11" fill="none"/>
+          </svg>
+          <div class="pct"><b>73%</b><span>ready</span></div>
+        </div>
+        <div class="score-stats">
+          <div class="row"><b>$2,150/mo</b><span class="ontime">31 on-time payments</span></div>
+          <div class="row"><b>~$295,000</b><span>est. buying power today</span></div>
+          <div class="row"><b>+$14,200</b><span>buying power gained this year</span></div>
+        </div>
+      </div>
+      <div class="score-foot">
+        💡 <b>Heads up:</b> at current rates, a mortgage on a 2-bed near you would run <b>$96 less</b> than your rent. Want Lea to pull your pre-approval options?
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="strip">
+  <div class="wrap strip-inner">
+    <div class="stat"><b>41M</b><span>renters matched (and counting)</span></div>
+    <div class="stat"><b>7M</b><span>apartments across the U.S.</span></div>
+    <div class="stat"><b>3 bureaus</b><span>Equifax, Experian &amp; TransUnion reporting</span></div>
+    <div class="stat"><b>$0</b><span>cost to renters. Seriously.</span></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <p class="kicker">The truth about renting</p>
+    <h2 class="h2">"Throwing money away"? Not anymore.</h2>
+    <p class="sub">The average renter pays rent for about seven years before buying their first home. That's seven years of perfect proof you can handle a mortgage — and until now, none of it counted.</p>
+    <div class="truth-grid">
+      <div class="truth-card bad">
+        <div class="big-number">$180K+</div>
+        <div class="lbl">What seven years of rent adds up to</div>
+        <h3>The old way</h3>
+        <p>You pay on time, every month, for years. Your landlord knows. Your bank doesn't. When you finally apply for a mortgage, you start from zero — like none of it ever happened. Rude.</p>
+      </div>
+      <div class="truth-card good">
+        <div class="big-number">31</div>
+        <div class="lbl">On-time payments, all working for you</div>
+        <h3>The Keys way</h3>
+        <p>Every payment builds your credit, feeds your Keys Score, and grows your verified buying power. The day the math flips in your favor, you'll be the first to know — and ready to move.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="steps" id="how">
+  <div class="wrap">
+    <p class="kicker">How it works</p>
+    <h2 class="h2">Three steps. Zero spreadsheets.</h2>
+    <p class="sub">You already know this flow. It's how we matched you with your apartment — now it's how we'll match you with your first home.</p>
+    <div class="steps-grid">
+      <div class="step">
+        <div class="num">1</div>
+        <h3>Turn on rent reporting</h3>
+        <p>Connect once and every on-time payment gets reported to all three credit bureaus. Past rent history? We can backfill up to 24 months of receipts.</p>
+        <span class="tag">Takes about 4 minutes</span>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h3>Watch your Keys Score grow</h3>
+        <p>One number that tracks your real progress to homeownership — credit, payment history, savings pace, and what mortgages cost in your city right now.</p>
+        <span class="tag">Updates every month</span>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h3>Make your move</h3>
+        <p>When buying beats renting, Lea flags it — then walks you to pre-approval and a vetted local agent. We've got you all the way. Again.</p>
+        <span class="tag">You set the timeline</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap lea-grid">
+    <div class="chat" aria-label="Example conversation with Lea">
+      <div class="who"><span class="lea-dot">L</span> Lea · your housing sidekick</div>
+      <div class="bubble lea-b">Hey Jordan! 🎉 Month 31 of on-time rent, reported. Your Keys Score just hit <b>73</b>.</div>
+      <div class="bubble lea-b">Also — rates dipped this week. A mortgage on a 2-bed in your area is now about <b>$96/month less than your rent</b>. First time it's flipped!</div>
+      <div class="bubble user-b">Wait, seriously? What would I qualify for?</div>
+      <div class="bubble lea-b">With your reported rent history and credit, you're looking at roughly <b>$295K in buying power</b>. Want me to line up pre-approval quotes? No hard credit pull until you say go.</div>
+      <div class="bubble user-b">Okay yes. Let's see it 👀</div>
+    </div>
+    <div>
+      <p class="kicker">Meet your moment</p>
+      <h2 class="h2">Lea knows when renting stops making sense. Now she'll tell you.</h2>
+      <div class="feature-list">
+        <div class="feature">
+          <div class="ic">📊</div>
+          <div>
+            <h4>The crossover alert</h4>
+            <p>We track rents in 7M units and live mortgage rates. The month owning beats renting in your city, you get the ping — not a guess, your actual numbers.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="ic">🧾</div>
+          <div>
+            <h4>Rent history that opens doors</h4>
+            <p>Verified, bureau-reported payment history that lenders can actually use in underwriting. Your discipline finally shows up on paper.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="ic">🔑</div>
+          <div>
+            <h4>A warm handoff, not a cold lead</h4>
+            <p>Pre-approval options and a vetted buyer's agent, lined up inside the app you already trust. No starting over with strangers.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="partners">
+  <div class="wrap">
+    <p class="kicker" style="color:#FFB1C4">For property partners</p>
+    <h2 class="h2">The retention perk that costs you nothing.</h2>
+    <p class="sub">Residents who are building toward something stay longer and pay on time — it's literally the product. Offer Keys as a community amenity and turn your best residents into your longest ones.</p>
+    <div class="partners-grid">
+      <div class="p-card">
+        <h3>Happier residents, longer leases</h3>
+        <p>Rent reporting is a top-requested amenity, and residents enrolled in credit-building programs renew more and pay on time more consistently. You get the retention; they get the credit. Everybody wins.</p>
+      </div>
+      <div class="p-card">
+        <h3>Plugged into A-List</h3>
+        <p>Keys lives alongside A-List Resident — the same platform handling your maintenance and renewals AI. One integration, one resident experience, zero extra workflows for your team.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quote">
+  <div class="wrap">
+    <blockquote>"We helped 41 million people find a place to rent. <span class="hl">Keys is how we help them leave us</span> — for a home of their own."</blockquote>
+    <cite>The whole point, honestly.</cite>
+  </div>
+</section>
+
+<!-- ============ PART 02 — THE ROADMAP ============ -->
+<div class="part" id="roadmap">
+  <div class="wrap part-inner">
+    <span class="pn">02</span>
+    <div>
+      <h2>The roadmap</h2>
+      <p>How a Founding Builder would take this from zero to revenue.</p>
+    </div>
+  </div>
+</div>
+
+<header class="rm-hero">
+  <div class="wrap">
+    <span class="eyebrow">The plan</span>
+    <h2>Build the rails while rates are high. <span class="accent">Own the wave when they break.</span></h2>
+    <p class="rm-lede">Renters are renting longer than any cohort in history — which means the deepest verified payment histories ever assembled are accumulating right now. Keys captures them before the first-time-buyer dam breaks. Every phase below is gated: we earn the next investment by passing the last gate.</p>
+    <div class="thesis">
+      <div class="thesis-card"><b>Asset-light, always</b><span>We own readiness data and the handoff — never homes, never loans, never balance-sheet risk.</span></div>
+      <div class="thesis-card"><b>Borrowed rails first</b><span>Partner for bureau furnishing and lending. Build only what's proprietary: the score, the alert, the lease graph.</span></div>
+      <div class="thesis-card"><b>Lea is the product</b><span>Keys isn't a new app. It's new superpowers for the assistant 41M renters already know.</span></div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <p class="kicker">Phased roadmap</p>
+    <h2 class="h2">Five phases. Each one cheap to test, expensive to skip.</h2>
+
+    <div class="timeline">
+
+      <div class="phase">
+        <div class="marker">0</div>
+        <div class="phase-head"><h3>Validate demand</h3><span class="when">Weeks 0–6</span></div>
+        <p class="goal"><b>The question:</b> do renters actually opt in when it's free and one tap away? Concierge-everything — no engineering beyond a landing page.</p>
+        <div class="phase-grid">
+          <div class="build">
+            <h4>What we ship</h4>
+            <ul>
+              <li><b>Waitlist page</b> inside Renter Hub + post-lease-signing email to recent matches</li>
+              <li><b>Concierge pilot:</b> 100 renters manually enrolled via a white-label rent-furnishing partner</li>
+              <li>20 renter interviews on the "thrown-away rent" pain and score concept</li>
+              <li>Partner LOI shortlist: bureau furnishers, 2–3 lenders, agent networks</li>
+            </ul>
+          </div>
+          <div class="gate">
+            <h4>Gate to Phase 1</h4>
+            <ul>
+              <li>≥8% opt-in from post-lease email cohort</li>
+              <li>≥60% of pilot completes payment connection</li>
+              <li>Furnishing partner terms signed</li>
+            </ul>
+            <span class="rev none">Revenue: $0 — by design</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="marker">1</div>
+        <div class="phase-head"><h3>Ship the rails</h3><span class="when">Months 2–5</span></div>
+        <p class="goal"><b>The wedge:</b> tri-bureau rent reporting, free for every Apartment List renter, with up to 24 months of history backfilled. The single highest-value, lowest-novelty thing we can ship — the rails everything else rides on.</p>
+        <div class="phase-grid">
+          <div class="build">
+            <h4>What we ship</h4>
+            <ul>
+              <li><b>Rent reporting v1</b> via furnishing partner (Equifax, Experian, TransUnion)</li>
+              <li><b>Keys Score v1:</b> payment streak + credit band + metro affordability, refreshed monthly</li>
+              <li><b>Lea integration:</b> monthly score update in the channel renters already read</li>
+              <li>Enrollment built into the lease-signing flow — the moment of maximum trust</li>
+            </ul>
+          </div>
+          <div class="gate">
+            <h4>Gate to Phase 2</h4>
+            <ul>
+              <li>25K enrolled renters</li>
+              <li>≥70% still enrolled at day 90</li>
+              <li>≥40% open their monthly score update</li>
+            </ul>
+            <span class="rev none">Revenue: $0 — building the asset</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="marker">2</div>
+        <div class="phase-head"><h3>The crossover engine</h3><span class="when">Months 5–9</span></div>
+        <p class="goal"><b>The moat:</b> the rent-vs-buy crossover alert. We already publish the most-cited rent data in the country — pointing it at each renter's actual numbers is something neither Bilt nor Zillow can replicate, because neither holds both sides.</p>
+        <div class="phase-grid">
+          <div class="build">
+            <h4>What we ship</h4>
+            <ul>
+              <li><b>Crossover model</b> per metro: live mortgage rates vs. our rent data vs. your rent</li>
+              <li><b>Lea alerts:</b> "owning just got cheaper than renting for you" — the message that makes Keys famous</li>
+              <li><b>Property partner pilot:</b> Keys as a free retention amenity at 10 A-List communities</li>
+              <li>Readiness milestones + savings pace nudges</li>
+            </ul>
+          </div>
+          <div class="gate">
+            <h4>Gate to Phase 3</h4>
+            <ul>
+              <li>≥50% engagement on crossover alerts</li>
+              <li>Measurable renewal lift at pilot properties</li>
+              <li>2 lender partnerships signed for Phase 3</li>
+            </ul>
+            <span class="rev none">Revenue: $0 — earning the right</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="marker">3</div>
+        <div class="phase-head"><h3>Monetize the handoff</h3><span class="when">Months 9–15</span></div>
+        <p class="goal"><b>The flip:</b> today, our highest-LTV customer event — a renter buying a home — earns us nothing. Phase 3 turns graduation day into the best unit economics in the company. A buy-side referral is worth thousands; a lease referral is worth hundreds.</p>
+        <div class="phase-grid">
+          <div class="build">
+            <h4>What we ship</h4>
+            <ul>
+              <li><b>Pre-approval marketplace:</b> 2–3 lender partners, soft-pull first, inside Lea</li>
+              <li><b>Vetted buyer's agent network</b> in 3 launch metros (high crossover-alert density)</li>
+              <li>Closed-loop attribution: enrolled renter → alert → pre-approval → close</li>
+              <li>Mortgage-readiness packet: verified rent history formatted for underwriting</li>
+            </ul>
+          </div>
+          <div class="gate">
+            <h4>Gate to Phase 4</h4>
+            <ul>
+              <li>500 pre-approval starts</li>
+              <li>First 50 attributed closings</li>
+              <li>CAC-free funnel confirmed (enrolled base only)</li>
+            </ul>
+            <span class="rev first">Revenue: first dollars — lender + agent referral fees</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="phase future">
+        <div class="marker">4</div>
+        <div class="phase-head"><h3>The dam breaks</h3><span class="when">Months 15+ · rate-cycle catalyst</span></div>
+        <p class="goal"><b>The payoff:</b> when rates drop, years of pent-up first-time buyers move at once — and whoever holds their payment history, readiness scores, and trust owns the wave. We'll have spent two years becoming the obvious front door.</p>
+        <div class="phase-grid">
+          <div class="build">
+            <h4>What we scale</h4>
+            <ul>
+              <li>Agent + lender network to 25 metros, prioritized by crossover density</li>
+              <li><b>Down-payment savings boost</b> with a partner bank (still asset-light)</li>
+              <li>Readiness data products for lender partners — the B2B second act</li>
+              <li>Full-circle loop: Keys buyers become Apartment List landlords and referrers</li>
+            </ul>
+          </div>
+          <div class="gate">
+            <h4>What success looks like</h4>
+            <ul>
+              <li>Keys attribution on 1% of partner-metro first-time purchases</li>
+              <li>Referral revenue/enrollee exceeds lease referral revenue/renter</li>
+              <li>Enrollment is a top-3 stated reason renters choose Apartment List</li>
+            </ul>
+            <span class="rev scale">Revenue: scaled — the second engine</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="model">
+  <div class="wrap">
+    <p class="kicker">Unit economics</p>
+    <h2 class="h2">Why graduation day beats lease day.</h2>
+    <div class="model-grid">
+      <div class="m-card">
+        <div class="amt">~$300</div>
+        <div class="per">Today · per lease referral</div>
+        <p>What a matched renter is worth now. One transaction, then we wait years to see them again — or never do.</p>
+      </div>
+      <div class="m-card">
+        <div class="amt">$2–4K+</div>
+        <div class="per">Phase 3 · per attributed closing</div>
+        <p>Buy-side agent referral (a share of commission) plus lender referral fees — on a customer we already acquired. Marginal CAC: approximately zero.</p>
+      </div>
+      <div class="m-card">
+        <div class="amt">$0</div>
+        <div class="per">Cost to the renter, forever</div>
+        <p>Free is the strategy. Enrollment is the moat — every reported month deepens data nobody else has and loyalty nobody else gets.</p>
+      </div>
+    </div>
+    <p class="model-note"><b>The honest math:</b> Keys only needs a small single-digit percentage of enrolled renters to transact through the handoff for the program to out-earn what those same renters generate in lease referrals — because each conversion is worth roughly 10x and the audience is already paid for.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="kicker">Guardrails</p>
+    <h2 class="h2">What we won't do.</h2>
+    <div class="guard-grid">
+      <div class="g-card no">
+        <h3>Never on the roadmap</h3>
+        <ul>
+          <li><b>Owning homes or fractions of them.</b> Rent-to-own 1.0 died on the balance sheet. We hold data, not deeds.</li>
+          <li><b>Originating loans.</b> Lenders lend; we deliver the most qualified, best-documented first-time buyer they've ever seen.</li>
+          <li><b>Charging renters.</b> Paid rent reporting is a $7/month commodity. Free-at-scale is the defensible position.</li>
+          <li><b>A separate app.</b> Keys lives where the renters already are.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="whynow" id="whynow">
+  <div class="wrap">
+    <p class="kicker" style="color:#FFB1C4">Why now</p>
+    <h2 class="h2">The window is open. It won't stay open.</h2>
+    <p class="sub">Three clocks are running at once.</p>
+    <div class="now-grid">
+      <div class="n-card">
+        <div class="num">01</div>
+        <p><b>The underwriting door is open.</b> GSE programs now count verified rent history toward mortgage eligibility. The rails are sanctioned — someone just has to build the on-ramp at scale.</p>
+      </div>
+      <div class="n-card">
+        <div class="num">02</div>
+        <p><b>The competition is moving.</b> Bilt has partnered with the nation's largest wholesale lender to run this exact play from the payments side. They need renters to switch how they pay. We don't — we're already there at lease signing.</p>
+      </div>
+      <div class="n-card">
+        <div class="num">03</div>
+        <p><b>The cohort is historic.</b> High rates mean renters are renting longer and accumulating deeper payment histories than ever. When rates break, the wave goes to whoever holds the data. That's a 12–24 month head start that can't be bought later.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:40px 0 80px">
+  <div class="final">
+    <h2>Phase 0 costs six weeks and a landing page.</h2>
+    <p>The downside is one quarter of one builder's time. The upside is the second revenue engine — and the reason renters never want to leave the platform, right up until the day we hand them their keys.</p>
+    <a class="btn" href="#top">Back to the top</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-inner">
+      <a class="logo" href="#top" style="font-size:16px">
+        <svg width="24" height="24" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path d="M16 3 L29 13 V26 a3 3 0 0 1-3 3 H6 a3 3 0 0 1-3-3 V13 Z" fill="#FA3C66"/>
+          <rect x="12.5" y="17" width="7" height="12" rx="2" fill="#fff"/>
+        </svg>
+        apartment list <span class="keys-tag">Keys</span>
+      </a>
+      <div class="foot-links">
+        <a href="#product">The product</a>
+        <a href="#roadmap">The roadmap</a>
+        <a href="#">Equal Housing Opportunity</a>
+      </div>
+    </div>
+    <p class="disclaimer">Independent concept prototype prepared for the Founding Builder, New Ventures application at Apartment List. Not an Apartment List product. All figures, gates, and timelines are illustrative planning estimates. Apartment List name, mark, and brand elements are property of Apartment List, Inc., used solely to present the concept in native context. Estimated buying power figures are illustrative. Rent payment reporting eligibility and mortgage qualification are subject to lender and GSE guidelines, including Fannie Mae positive rent payment programs.</p>
+  </div>
+</footer>
+
+</body>
+</html>
